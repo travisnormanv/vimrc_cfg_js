@@ -26,6 +26,12 @@ Plugin 'ycm-core/YouCompleteMe'
 " ALE
 Plugin 'dense-analysis/ale'
 
+" css-color
+Plugin 'ap/vim-css-color'
+
+"closetags
+Plugin 'alvan/vim-closetag'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -81,4 +87,8 @@ autocmd vimenter * call StartVim() | wincmd p
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " ALE
-let g:ale_linters={'javascript': ['eslint']}
+let g:ale_linters={'javascript': ['eslint'], 'html': ['htmlhint']}
+let g:ale_htmlhint_options='--config=./.htmlhintrc'
+
+" closetags
+let g:closttags_filename='*.html, *.js'
